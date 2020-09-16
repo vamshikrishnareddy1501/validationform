@@ -1,0 +1,59 @@
+ <DOCTYPE html>
+	<html>
+	<body>
+		<style>
+			.id{
+			text-align: center;
+
+		}
+		body{
+		background-image:url(https://i.pinimg.com/originals/61/0f/ba/610fba3676513dd50587cf0eb255dbf8.jpg);
+		background-size:cover;
+		
+		
+	}
+	form{
+		font-size: 30px;
+	}
+		
+	</style>
+	 <h1 font color="green"  text align="center">Validation Form</font></h1><hr><br><br>
+		<script type="text/javascript">
+		function printvalue(){
+			var name=document.form1.name.value;
+			var password=document.form1.password.value;
+			alert("welcome:"+name);
+			
+			if(name==null||name==""){
+					alert("name cant be blank");
+				return false;
+			}
+			
+			else if(password.length<6){
+				alert("password must be atleast 6 characters");
+				return false;
+
+			}
+
+
+		}
+
+
+	</script>
+	<form name="form1" class="id" method="post" action="vamshi.html" onsubmit="return printvalue()">
+		<font color="green" >Enter Name:<input type ="text"  name="name"><br><br>
+		Enter password:<input type ="password" name="password" / required><br><br>
+		Email Id : <input type ="text" name="email"  placeholder="Email" required> <br><br>
+	Mobile Number: <input type="text" name="MobileNumber"placeholder="Mobile Number" maxlength="10" required ><br><br>
+	
+	Gender :<align="center"><input type="radio"  name="gender" id="Male"value="male" required><label for="Male" required>Male</label> <input type="radio" id="female" name="gender" value="female" required><label for="female" required>female</label><br><BR>
+		
+		select a course :   <select id="courses" name="Course" >
+		<option value="select" >select one course</option>
+     <option value="CSE" >CSE</option>
+    <option value="ECE" >ECE</option>
+    <option value="IT" >IT</option>
+  </select ><BR><BR>
+  <input type="submit"  value="submit"/>
+	</form></body></html>
+
